@@ -1,0 +1,108 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f0ff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: #f0ebe5;
+  padding: 0.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--branco);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav a {
+  color: var(--preto);
+  text-decoration: none;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.book-details {
+  background: white;
+  padding: 30px;
+  display: flex;
+  gap: 40px;
+
+}
+
+.book-info h2 {
+  color: #6b3dca;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 15px 0;
+  color: #1f1d1d;
+}
+
+.buy-btn {
+  background-color: #6b3dca;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #5832a8;
+}
+
+.details-list {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #555;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.details-list li {
+  margin-bottom: 8px;
+}
+
+.book-info h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+@media (max-width: 600px) {
+  .book-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-details img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .book-info {
+    width: 100%;
+  }
+}

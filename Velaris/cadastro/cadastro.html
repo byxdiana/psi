@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+        <img src="logo-velaris.png" alt="Logo Livraria Velaris" class="logo">
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Login</a>
+            <a href="#"> Cadrasto</a>
+            <a href="#" onclick="abrirModal('modalSobre')">Sobre</a>
+        </nav>
+    </header>
+
+    <section class="hope">
+        <form action="/login" method="POST">
+            <label for="Nome">Nome:</label><br />
+            <input type="text" id="name" name="nome" required /><br /><br />
+
+            <label for="sobrenome">Sobrenome (opcional):</label><br />
+            <input type="text" id="Sobrenome" name="Sobrenome" required /><br /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+    
+            <label for="senha">Senha:</label><br />
+            <input type="password" id="senha" name="senha" required /><br /><br />
+    
+            <button type="submit">cadastrar</button>
+        </form>
+    </section>
+</body>
+</html>

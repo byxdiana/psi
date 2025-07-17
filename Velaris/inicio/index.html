@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início | Livraria Velaris</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+ <header>
+  <img src="logo-velaris.png" alt="Logo Livraria Velaris" class="logo">
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Login</a>
+    <a href="#"> Cadrasto</a>
+    <a href="#" onclick="abrirModal('modalSobre')">Sobre</a>
+  </nav>
+</header>
+
+
+
+  <main>
+    <section class="sobre">
+      <div>
+        <h2>Bem-vindo à Livraria Velaris</h2>
+        <p>
+          Velaris é uma livraria aconchegante onde você pode sentar para ler um livro ou adquirilos e leva-los com você pra casa.
+          Ou você pode se cadastrar em nosso site e ele chegará em sua casa.
+        </p>
+        <p>
+          Além de vendas onlines e presenciais, realizamos clubes de leitura mensais, sessões de autógrafos com autores nacionais e internacionais
+          e oficinas de escrita criativa. Aqui, cada estante é um portal e cada leitor, um viajante.
+        </p>
+      </div>
+      <img src="interior-livraria.jpg" alt="Interior aconchegante da Livraria Velaris" class="sobre-img">
+    </section>
+
+    <section>
+      <table>
+        <caption>Horários de Atendimento</caption>
+        <tr>
+          <th>Dia</th>
+          <th>Horário</th>
+        </tr>
+        <tr>
+          <td>Seg - Sex</td>
+          <td>09h - 18h</td>
+        </tr>
+        <tr>
+          <td>Sábado</td>
+          <td>10h - 14h</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Livraria Velaris | Todos os direitos reservados</p>
+  </footer>
+
+  <div id="modalContato" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalContato')">&times;</span>
+      <h2>Contato</h2>
+      <p>Nos mande um e-mail: <a href="mailto:contato@velarislivros.com">contato@velarislivros.com</a></p>
+    </div>
+  </div>
+
+  
+  <div id="modalSobre" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalSobre')">&times;</span>
+      <h2>Sobre a Velaris</h2>
+      <p>Uma livraria feita para os amantes de histórias mágicas.</p>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function fecharModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    window.onclick = function (event) {
+      const modais = document.querySelectorAll('.modal');
+      modais.forEach(modal => {
+        if (event.target === modal) modal.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
